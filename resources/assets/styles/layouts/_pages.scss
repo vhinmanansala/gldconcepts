@@ -1,0 +1,34 @@
+#projects-container {
+    .project {
+        height: 750px;
+        position: relative;
+
+        .image-aside {
+            bottom: 0;
+            height: 100%;
+            left: calc(30% - 970px / 2 + 15px + (970px / 12) * 9);
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            .image-wrap {
+                overflow: hidden;
+
+                img {
+                    height: 750px;
+                    left: 50%;
+                    max-width: none;
+                    min-width: 100%;
+                    min-height: 100%;
+                    position: absolute;
+                    top: 0;
+                    transform: translate(-50%, 0%);
+                    width: auto;
+                }
+} 
+        } 
+    }
+}
+
+
+ 
