@@ -11,6 +11,11 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public function siteUrl()
+    {
+        return get_bloginfo('url');
+    }
+
     public static function title()
     {
         if (is_home()) {
@@ -29,5 +34,10 @@ class App extends Controller
             return __('Not Found', 'sage');
         }
         return get_the_title();
+    }
+
+    public function socialMedias()
+    {
+        return get_field('social_medias', 'option');
     }
 }

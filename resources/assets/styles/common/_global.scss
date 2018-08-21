@@ -1,0 +1,58 @@
+body {
+    background: #bfcad0;
+    font-family: 'Lato', sans-serif !important;
+    font-weight: 300;
+
+    p, li, span, label, input, a {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Lustria', serif;
+        text-transform: uppercase;
+    }
+
+    .flexslider {
+        background: none;
+        border: none;
+        padding-bottom: 30px;
+    }
+}
+
+#menu-container {
+    background: #dbc997;
+    height: 75px;  
+    position: fixed;
+    right: 0;
+    transform-origin: right top;
+    transform: rotate(90deg) translateX(100%);
+    top: 0;
+    width: 100vh;  
+    z-index: 99;
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        float: left;
+        height: 100%;
+        line-height: 75px;
+
+        a {
+            color: #ffffff;
+            display: block;
+            padding: 0 30px; 
+        }
+    }
+
+    li.current-menu-item a {
+        background: #000000;
+    }
+}
+
+.text-right {
+    text-align: right;
+}

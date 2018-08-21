@@ -1,5 +1,6 @@
 // import external dependencies
 import 'jquery';
+import 'flexslider/jquery.flexslider-min.js';
 
 // Import everything from autoload
 import "./autoload/**/*"

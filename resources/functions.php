@@ -93,3 +93,11 @@ Container::getInstance()
         ]);
     }, true);
 
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-settings',
+        'capability'    => 'edit_posts',
+        'redirect'      => false
+    ));
+}

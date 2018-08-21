@@ -1,3 +1,11 @@
-.banner .nav {
-  @extend .menu;
+#header-container {
+    padding: 90px 0;
+
+    #introduction-container {
+        padding-top: 20px;
+    }
+}
+
+.home #header-container {
+    padding-bottom: 0;
 }

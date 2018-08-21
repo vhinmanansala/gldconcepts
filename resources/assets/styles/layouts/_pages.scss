@@ -1,7 +1,55 @@
 #projects-container {
+    padding-bottom: 30px;
+
+    #project-heading {
+        bottom: -130px;
+        position: relative;
+
+        h3 {
+            display: inline-block;
+            position: relative;
+
+            &:after {
+                background: #000000;
+                content: "";
+                display: block;
+                height: 1px;
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+
     .project {
         height: 750px;
         position: relative;
+
+        .cell {
+            height: 750px;
+            position: relative;
+        }
+
+        .content-container {
+            display: table;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .content {
+            display: table-cell;
+            position: relative;
+            vertical-align: middle;
+            z-index: 9;
+
+            div {
+                background: #ffffff;
+                border-top: 5px solid #dbc997;
+                padding: 60px;
+            }
+        }
 
         .image-aside {
             bottom: 0;
@@ -25,7 +73,7 @@
                     transform: translate(-50%, 0%);
                     width: auto;
                 }
-} 
+            } 
         } 
     }
 }
