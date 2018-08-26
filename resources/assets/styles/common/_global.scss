@@ -3,7 +3,9 @@ body {
     font-family: 'Lato', sans-serif !important;
     font-weight: 300;
 
-    p, li, span, label, input, a {
+    p, li, span, label, input, a, textarea {
+        color: #000000;
+        font-size: 16px;
         font-family: 'Lato', sans-serif;
         font-weight: 300;
     }
@@ -55,4 +57,59 @@ body {
 
 .text-right {
     text-align: right;
+}
+
+.image-aside {
+    bottom: 0;
+    height: 100%;
+    left: calc(21% - 970px / 2 + 15px + (970px / 12) * 9);
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .image-wrap {
+        overflow: hidden;
+
+        img {
+            height: 750px;
+            left: 50%;
+            max-width: none;
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 0;
+            transform: translate(-50%, 0%);
+            width: auto;
+        }
+    } 
+}
+
+.justified-center {
+    justify-content: center;
+}
+
+.button {
+    background: #000000;
+    border: 1px solid #000000;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px 25px;
+    transition-duration: .3s;
+
+    &:hover {
+        background: none;
+        color: #000000;
+        transition-duration: .3s;
+    }
+}
+
+#call-to-action-container {
+    margin: 60px 0 90px;
+
+    #call-to-action-content {
+        background: #dfe5e8;
+        padding: 60px;
+        text-align: center;
+    }
 }

@@ -1,3 +1,7 @@
+#alternative-layout-container {
+    margin-top: 90px;
+}
+
 #projects-container {
     padding-bottom: 30px;
 
@@ -50,33 +54,71 @@
                 padding: 60px;
             }
         }
-
-        .image-aside {
-            bottom: 0;
-            height: 100%;
-            left: calc(30% - 970px / 2 + 15px + (970px / 12) * 9);
-            position: absolute;
-            right: 0;
-            top: 0;
-
-            .image-wrap {
-                overflow: hidden;
-
-                img {
-                    height: 750px;
-                    left: 50%;
-                    max-width: none;
-                    min-width: 100%;
-                    min-height: 100%;
-                    position: absolute;
-                    top: 0;
-                    transform: translate(-50%, 0%);
-                    width: auto;
-                }
-            } 
-        } 
     }
 }
 
+#contact-page-container {
+    #contact-form-container {
+        padding: 60px 0;
+    }
 
- 
+    .field {
+        margin-bottom: 15px;
+    }
+
+    input, textarea {
+        background: none;
+        border: none;
+        border-bottom: 1px solid #000000;
+        box-shadow: none;
+        font-weight: 300;
+        padding-left: 0;
+        padding-right: 0;
+        resize: none;
+
+        &:focus {
+            box-shadow: none;
+            outline: none;
+        }
+    }
+
+    input[type='submit'] {
+        background: #000000;
+        border: 1px solid #000000;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 16px;
+        padding: 15px 25px;
+        transition-duration: .3s;
+
+        &:hover {
+            background: none;
+            color: #000000;
+            transition-duration: .3s;
+        }
+    }
+}
+
+body.about {
+    overflow-x: hidden;
+
+    #about-page-container {
+        .featured-image {
+            height: 750px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        img {
+            transform: translate(-40%, 0%);
+        }
+    }
+
+    #main-content, #additional-infos {
+        margin-bottom: 60px;
+
+        .additional-info {
+            margin-bottom: 60px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 <div id="header-container">
     <div class="grid-container">
         <div class="grid-x grid-padding-x">
-            <div class="cell medium-3 lage-3">
+            <div class="cell medium-3 large-3">
                 <a href="{{ $site_url }}">
                     <img src="@asset('images/logo.png')">
                 </a>
