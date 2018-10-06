@@ -6,7 +6,7 @@ use WP_Query;
 
 use Sober\Controller\Controller;
 
-class FrontPage extends Controller
+class PagePortfolio extends Controller
 {
     public function projects()
     {
@@ -14,8 +14,11 @@ class FrontPage extends Controller
         return new WP_Query($args);
     }
 
-    public function featuredProjectCategories()
+    public function projectTypes()
     {
-        return get_field('featured_project_categories', 'option');
+        return get_terms([
+            'taxonomy' => 'project_type',
+            'hide_empty' => false,
+        ]);
     }
 }

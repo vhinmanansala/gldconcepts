@@ -1,7 +1,19 @@
+$hambgcolor: #000000;
+$hambasewidth: 25px;
+$hamsizemultiplier: 2;
+
 body {
     background: #bfcad0;
     font-family: 'Lato', sans-serif !important;
     font-weight: 300;
+
+    .mobile {
+        display: none;
+    }
+
+    .page-header {
+        margin-bottom: 30px;
+    }
 
     p, li, span, label, input, a, textarea {
         color: #000000;
@@ -11,8 +23,21 @@ body {
     }
 
     h1, h2, h3, h4, h5, h6 {
+        color: #26282a;
         font-family: 'Lustria', serif;
         text-transform: uppercase;
+
+        a {
+            font-family: inherit;
+            font-size: inherit;
+            transition-duration: .3s;
+
+            &:hover,
+            &:focus,
+            &:active {
+                color: #6f7274;
+            }
+        }
     }
 
     .flexslider {
@@ -57,6 +82,10 @@ body {
 
 .text-right {
     text-align: right;
+}
+
+.text-left {
+    text-align: left;
 }
 
 .image-aside {
@@ -112,4 +141,68 @@ body {
         padding: 60px;
         text-align: center;
     }
+}
+
+.hamburger {
+  width: $hambasewidth * $hamsizemultiplier;
+  height: 22.5px * $hamsizemultiplier;
+  position: absolute;
+  cursor: pointer;
+  left: auto;
+  right: 20px;
+  margin-left: -($hambasewidth * $hamsizemultiplier) / 2;
+  top: 110px;
+  margin-top: -(22.5px * $hamsizemultiplier) / 2;
+  z-index: 999999999;
+
+  span {
+    display: block;
+    position: absolute;
+    height: 1px * $hamsizemultiplier;
+    width: 100%;
+    background: $hambgcolor none repeat scroll 0% 0%;
+    opacity: 1;
+    right: 0px;
+    transition: all 0.25s ease-in-out 0s;
+    transform: rotate(0deg);
+
+    &:nth-child(1) {
+      margin-top: 0px;
+    }
+    &:nth-child(2) {
+      margin-top: 8px * $hamsizemultiplier;
+      margin-right: 0px;
+    }
+    &:nth-child(3) {
+      margin-top: 16px * $hamsizemultiplier;
+    }
+  }
+  &.opened {
+    span {
+      &:nth-child(1) {
+        transform: rotate(135deg);
+        margin-top: 8px * $hamsizemultiplier;
+      }
+      &:nth-child(2) {
+        display: none;
+        opacity: 0;
+        right: -$hambasewidth * 3;
+      }
+      &:nth-child(3) {
+        transform: rotate(-135deg);
+        margin-top: 8px * $hamsizemultiplier;
+      }
+    }
+  }
+}
+
+
+#additional-content-container {
+    h4 {
+        margin-bottom: 30px;
+    }
+}
+
+.additional-content {
+    margin-bottom: 30px;
 }

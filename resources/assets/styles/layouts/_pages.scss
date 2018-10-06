@@ -57,6 +57,51 @@
     }
 }
 
+#featured-projects-category-container {
+    .heading {
+        position: relative;
+
+        &:before {
+            background: #000000;
+            content: '';
+            display: block;
+            height: 100px;
+            position: absolute;
+            right: 40px;
+            width: 1px;
+        }
+
+        &:after {
+            content: 'Project Categories';
+            display: block;
+            font-family: 'Lustria', serif;
+            font-size: 24px;
+            left: -109px;
+            position: absolute;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+            top: 100px;
+            width: 280px;
+        }
+    }
+
+    .content {
+        background: #ffffff;
+        max-width: 90%;
+        padding: 30px 30px 70px;
+        position: relative;
+        top: -70px;
+
+        a {
+            bottom: 0;
+            margin: 0;
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+/* contact */
 #contact-page-container {
     #contact-form-container {
         padding: 60px 0;
@@ -99,7 +144,10 @@
     }
 }
 
-body.about {
+
+/* about */
+body.about,
+body.page-workflow {
     overflow-x: hidden;
 
     #about-page-container {
@@ -119,6 +167,176 @@ body.about {
 
         .additional-info {
             margin-bottom: 60px;
+        }
+    }
+}
+
+/* workflow */
+body.page-workflow {
+    #workflow-content-container {
+        margin-top: 60px;
+        
+        .icon,
+        .content {
+            display: table-cell;
+        }
+
+        .icon {
+            vertical-align: top;
+            width: 100px;
+
+            i {
+                font-size: 40px;
+            }
+        }
+
+        .content {
+            padding-bottom: 30px;
+        }
+    }
+}
+
+/* portfolio */
+body.archive #projects-container,
+#portfolio-page-container {
+    #projects {
+        padding-top: 60px;
+    }
+
+    .project {
+        margin-bottom: 120px;
+
+        .cell.medium-10.large-10 {
+            position: relative;
+        }
+    }
+
+    .project-content-container {
+        display: table;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        .project-content {
+            display: table-cell;
+            vertical-align: middle;
+
+            div {
+                background: #ffffff;
+                border-top: 5px solid #dbc997;
+                padding: 60px;
+                position: relative;
+                width: 450px;
+            }
+        }
+    }
+
+    .right-content {
+        .project-content > div {
+            right: -70%;
+        }
+    }
+
+    .left-content {
+        .project-content > div {
+            left: -30%;
+        }
+    }
+
+    #project-categories-container {
+        strong {
+            display: block;
+        }
+        ul {
+            display: inline;
+            padding: 0;
+
+            li {
+                border-bottom: 1px solid #000000;
+                border-right: 1px solid #000000;
+                border-top: 1px solid #000000;
+                display: inline-block;
+                margin-right: -6px;
+
+                &:first-child a {
+                    border-left: 1px solid #000000;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: 10px 15px;
+                    transition-duration: .3s;
+
+                    &:hover {
+                        background: #000000;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* single project */
+body.single-project {
+    overflow-x: hidden;
+
+    #portfolio-detail-container {
+        .featured-image {
+            height: 750px;
+            margin-bottom: 60px;
+            position: relative;
+
+            img {
+                transform: translate(-48%, 0%);
+            }
+        }
+    }
+
+    #portfolio-gallery-container {
+        padding: 60px 0 0;
+
+        .grid-item-width2 { 
+            height: 220px; 
+            width: 440px; 
+        }
+
+        .grid-item-height2 { 
+            height: 440px; 
+            width: 220px;
+        }
+    }
+
+    #pagination-container {
+        margin: 120px 0;
+
+        .grid-x.grid-padding-x {
+            background: #dfe5e8;
+            padding: 60px;
+            position: relative;
+
+            &:before {
+                background: #c8ced0;
+                content: "";
+                display: block;
+                height: 80%;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                top: 10%;
+                width: 1px; 
+            }
+
+            .cell {
+                padding: 0 60px;
+            }
+
+            h4 {
+                margin-top: 15px;
+            }
         }
     }
 }

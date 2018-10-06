@@ -40,4 +40,19 @@ class App extends Controller
     {
         return get_field('social_medias', 'option');
     }
+
+    public function residentialProjects()
+    {
+        return get_field('residential_projects');
+    }
+
+    public function officeProjects()
+    {
+        return get_field('office_projects');
+    }
+
+    public function commercialProjects()
+    {
+        return get_field('commercial_projects');
+    }
 }

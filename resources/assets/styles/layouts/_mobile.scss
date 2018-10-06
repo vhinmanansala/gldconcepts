@@ -1,0 +1,125 @@
+@media only screen
+and (max-width : 1017px) {
+    .desktop {
+        display: none !important;
+    }
+
+    #header-container {
+        margin-top: 0;
+        padding: 30px 0;
+    }
+
+    #logo {
+        display: block;
+        padding-bottom: 60px;
+    }
+
+    #alternative-layout-container {
+        padding-bottom: 60px;
+        margin-top: 30px;
+    }
+
+    #projects-container #project-heading {
+        padding-top: 30px;
+    }
+
+    body {
+        padding-right: 0;
+    }
+
+    .buttonHover {
+        margin-bottom: 0;
+    }
+
+    .image-aside .image-wrap img {
+        height: auto;
+        left: 0;
+        max-width: 100%;
+        position: relative;
+        transform: none;
+    }
+
+    .image-aside .image-wrap {
+        overflow: auto;
+    }
+
+    .image-aside {
+        left: 0;
+        position: relative;
+    }
+
+    #projects-container .project .cell {
+        height: auto;
+    }
+
+    #projects-container .project .content-container {
+        display: block;
+        position: relative;
+    }
+
+    #footer-container .social-media:before {
+        display: none;
+    }
+
+    #footer-container {
+        text-align: center;
+
+        .text-right {
+            text-align: center;
+        }
+    }
+
+    body.single-project #pagination-container {
+        margin: 60px 0;
+    }
+
+    body.single-project #pagination-container .grid-x.grid-padding-x .cell {
+        padding: 0.625rem;
+    }
+
+    #pagination-container a {
+        text-align: center;
+    }
+
+    body.single-project #pagination-container .grid-x.grid-padding-x:before {
+        display: none;
+    }
+
+    #portfolio-page-container .right-content .project-content > div {
+        right: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    #portfolio-page-container .left-content .project-content > div {
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    #portfolio-page-container .project-content-container .project-content {
+        display: block;
+
+        div {
+            margin-bottom: 30px;
+            padding: 25px;
+        }
+    }
+
+    #portfolio-page-container #project-categories-container  {
+        select {
+            background: #bfcad0;
+            border: 1px solid #000000;
+
+            option:hover,
+            option:checked {
+                background: #000000;
+                color: #ffffff;
+            }
+        }
+    }
+
+    #projects-container .project .content div {
+        padding: 25px;
+    }
+}
