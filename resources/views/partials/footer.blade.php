@@ -2,7 +2,7 @@
     <div id="footer-container">
         <div class="grid-x grid-padding-x">
             <div class="cell medium-12 large-6">
-                <h4>GLDCONCEPTS</h4>
+                <h4>GLD CONCEPTS</h4>
                 <p>Copyright &copy {{ date('Y') }} All rights reserved</p>
             </div>
 
