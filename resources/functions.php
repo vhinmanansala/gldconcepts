@@ -112,3 +112,11 @@ function trunc($phrase, $max_words) {
       $phrase = implode(' ',array_slice($phrase_array, 0, $max_words));
     return $phrase;
 }
+
+function custom_posts_per_page( $query ) {
+
+    if ( $query->is_archive('project') ) {
+        set_query_var('posts_per_page', 1);
+    }
+}
+add_action( 'pre_get_posts', 'custom_posts_per_page' );

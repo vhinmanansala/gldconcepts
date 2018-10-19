@@ -14,9 +14,14 @@ class SingleProject extends Controller
     public function sizes()
     {
         return [
-            ['width' => 290, 'height' => 290],
-            ['width' => 580, 'height' => 290],
-            ['width' => 580, 'height' => 580],
+            ['width' => 290, 'height' => 300],
+            ['width' => 590, 'height' => 300],
+            ['width' => 590, 'height' => 590],
         ];
+    }
+
+    public function link()
+    {
+        return get_field('link');
     }
 }

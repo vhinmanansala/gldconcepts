@@ -24,7 +24,7 @@ body {
 
     h1, h2, h3, h4, h5, h6 {
         color: #26282a;
-        font-family: 'Julius Sans One', sans-serif;
+        font-family: 'Merriweather', serif;
         text-transform: uppercase;
 
         a {
@@ -205,4 +205,38 @@ body {
 
 .additional-content {
     margin-bottom: 30px;
+}
+
+#pagination-container.numbered {
+    border-bottom: 1px solid #000000;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+
+    .pagination-list {
+        text-align: center;
+
+        a, span {
+            font-weight: bold;
+            padding: 0 15px;
+        }
+
+        span {
+            color: rgba(0, 0, 0, .5);
+        }
+
+        a {
+            transition-duration: .3s;
+
+            &:hover {
+                color: rgba(0, 0, 0, .5);
+                transition-duration: .3s;
+            }
+        }
+    }
+}
+
+body.archive {
+    #pagination-container {
+        border: none;
+    }
 }

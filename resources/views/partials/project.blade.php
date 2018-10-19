@@ -35,6 +35,7 @@
             jQuery(window).load(function() {
                 jQuery('.grid').packery({
                     itemSelector: '.grid-item',
+                    gutter: 10
                 });
             });
         </script>

@@ -41,6 +41,17 @@
                 @php($counter = 1)
                 
                 <div id="projects">
+                    <?php
+                        $current_page = get_query_var('paged');
+                        $current_page = max( 1, $current_page );
+
+                        $args = array('post_type' => 'project', 'posts_per_page' => 3, 'paged' => $current_page);
+                        $projects = new WP_Query($args);
+
+                        $total_rows = $projects->found_posts;
+                        $total_pages = ceil($projects->found_posts / 3);
+                    ?>
+
                     @while($projects->have_posts()) @php($projects->the_post())
                         @php($params = array( 'width' => 670, 'height' => 685 ))
                         @php($thumbnail = get_the_post_thumbnail_url())
@@ -73,7 +84,26 @@
                             </div>
                         </div>
                         @php($counter++)
-                    @endwhile @php(wp_reset_postdata())
+                    @endwhile 
+                    
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell medium-12 large-12">
+                                <div id="pagination-container" class="numbered">
+                                    <?php 
+                                        echo "<div class='pagination-list'>";
+                                            echo paginate_links(array(
+                                               'total'   => $total_pages,
+                                               'current' => $current_page,
+                                            ));
+                                        echo  "</div>";
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    @php(wp_reset_postdata())
                 </div>
             </div>
 
@@ -81,7 +111,7 @@
                 <div class="grid-container">
                     <div class="grid-x grid-padding-x">
                         <div class="cell large-12">
-                            <h4>Compeleted Projects</h4>
+                            <h4>Other Compeleted Projects</h4>
                         </div>
                     </div>
 

@@ -15,10 +15,4 @@ class Archive extends Controller
             'hide_empty' => false,
         ]);
     }
-
-    public function projects()
-    {
-        $args = array('post_type' => 'project', 'posts_per_page' => 3);
-        return new WP_Query($args);
-    }
 }

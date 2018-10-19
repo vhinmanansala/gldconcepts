@@ -74,7 +74,7 @@
         &:after {
             content: 'Project Categories';
             display: block;
-            font-family: 'Julius Sans One', sans-serif;
+            font-family: 'Merriweather', serif;
             font-size: 24px;
             left: -109px;
             position: absolute;
@@ -338,5 +338,9 @@ body.single-project {
                 margin-top: 15px;
             }
         }
+    }
+
+    .customButton:before {
+        background: #bfcad0;
     }
 }

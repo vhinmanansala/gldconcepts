@@ -8,7 +8,7 @@
                     <div class="grid-x grid-padding-x">
                         <div class="cell medium-12 large-12">
                             @include('partials.page-header')
-
+                        
                             @include('partials.'.get_post_type())
                         </div>
                     </div>
